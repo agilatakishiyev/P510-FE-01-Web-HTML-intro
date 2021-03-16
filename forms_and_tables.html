@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <style>
+        span {
+            border: none;
+            background-color: red;
+        }
+    </style> -->
+    <!-- <link rel="stylesheet" href="./assets/styles/style.css"> -->
+    <title>Forms & Tables</title>
+</head>
+
+<body>
+    <!-- There are 3 ways of writing CSS(cascading style sheets) 
+        1. inline - writing in opening tag of html element <span style="border: none; background-color: red;"></span>
+        2. internal - look up to head, luke i am your father
+        3. external - we link css with link element inside head element
+    -->
+
+    <!-- Tables -->
+    <table>
+        <caption>This table demonstrates information about students of P510</caption>
+        <colgroup>
+            <col style="background-color: red;">
+            <col span="2" style="background-color: teal;">
+            <col style="background-color: blue;">
+        </colgroup>
+        <!-- table head -->
+        <thead>
+            <!-- table row -->
+            <tr>
+                <!-- table head(cell) -->
+                <th colspan="2">First Name & Last Name</th>
+                <!-- <th>Last Name</th> -->
+                <th>Birthdate</th>
+                <th>Class Number</th>
+            </tr>
+        </thead>
+        <!-- table body -->
+        <tbody>
+            <!-- table row -->
+            <tr>
+                <!-- table data(cell) -->
+                <td colspan="2">Tural Suleymanli</td>
+                <td>10-10-2002</td>
+                <td>P510</td>
+            </tr>
+            <tr>
+                <!-- table data(cell) -->
+                <td>Seymur</td>
+                <td>Suleymanli</td>
+                <td>10-10-2002</td>
+                <td>P510</td>
+            </tr>
+        </tbody>
+    </table>
+
+
+    <!-- 
+        HTTP methods - 
+        GET - elde elemek
+        PUT 
+        PATCH
+        POST - gondermek
+     -->
+    <!-- Forms -->
+    <form method="POST" autocomplete="off">
+        <!-- Self closing -->
+        <label for="firstname">Firstname*:</label>
+        <input type="text" name="firstname" id="firstname" placeholder="enter your name">
+        <p></p>
+        <label for="lastname">Lastname:</label>
+        <input type="text" name="lastname" id="lastname" placeholder="enter your last name" value="Atakishiyev"
+            required>
+        <p></p>
+        <label for="birthdate">Birthdate:</label>
+        <input type="date" name="birthdate" id="birthdate">
+        <p></p>
+        <label for="password">Password:</label>
+        <input type="password" name="password" id="password" placeholder="enter your password">
+        <p></p>
+        <label for="email">Email:</label>
+        <input type="email" name="email" id="email" placeholder="example@example.com">
+        <p></p>
+        <label for="profile_image">Profile photo:</label>
+        <input type="file" id="profile_image" accept="image/png, image/jpeg" name="profile_image">
+        <!-- the default for accept attribute is all MIME types -->
+        <!-- <input type="file" id="profile_image" accept="*"> -->
+        <p></p>
+        <label for="female">Female</label>
+        <input type="radio" id="female" name="gender">
+        <label for="male">Male</label>
+        <input type="radio" id="male" name="gender">
+        <label for="not_preferred">Not Prefer to say</label>
+        <input type="radio" id="not_preferred" name="gender">
+        <p></p>
+        <label for="">Choose what you liked in our site:</label>
+        <p></p>
+        <label for="music">music</label>
+        <input type="checkbox" name="favourite" checked id="music">
+        <label for="video">video</label>
+        <input type="checkbox" name="favourite" checked id="video">
+        <label for="game">game</label>
+        <input type="checkbox" name="favourite" checked id="game">
+        <p></p>
+        <label for="search">Please enter something to search:</label>
+        <input type="search" id="search" placeholder="please enter something to search" name="search">
+        <p></p>
+        <label for="amount">Amount</label>
+        <input type="number" name="amount" id="amount" max="10" min="0">
+        <p></p>
+        <input type="hidden" name="sensitive-data" value="">
+        <p></p>
+        <label for="reservation-time">Reservation time</label>
+        <input type="time" name="reservation-time" id="reservation-time">
+        <p></p>
+        <label for="phone">Phone</label>
+        <input type="tel" name="phone" id="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}">
+        <p></p>
+        <!-- Button in forms submit the form when clicked, it is a default behaviour -->
+        <button>Submit</button>
+    </form>
+</body>
+
+</html>
